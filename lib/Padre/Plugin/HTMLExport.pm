@@ -4,12 +4,12 @@ use 5.006;
 use warnings;
 use strict;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 use File::Basename ();
 
 use base 'Padre::Plugin';
-use Wx ':everything';
+use Padre::Wx ();
 use Wx::Locale qw(:default);
 
 our %KATE_ALL = (
