@@ -1,6 +1,6 @@
 package Padre::Plugin::HTMLExport;
 BEGIN {
-  $Padre::Plugin::HTMLExport::VERSION = '0.06';
+  $Padre::Plugin::HTMLExport::VERSION = '0.07';
 }
 
 # ABSTRACT: Export highlighted HTML in Padre
@@ -182,7 +182,7 @@ Padre::Plugin::HTMLExport - Export highlighted HTML in Padre
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 
