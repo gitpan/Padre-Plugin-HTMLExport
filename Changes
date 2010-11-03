@@ -1,5 +1,8 @@
 Revision history for Padre-Plugin-HTMLExport
 
+0.08   2010.11.02
+        Removed Test::NeedsDisplay dependency (AZAWAWI)
+
 0.07   2010.10.27
         t/00-load.t is magically injected by [@PadrePlugin] via [LoadTests] (AZAWAWI)
 
