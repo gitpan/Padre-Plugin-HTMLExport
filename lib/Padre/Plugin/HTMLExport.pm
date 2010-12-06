@@ -1,6 +1,6 @@
 package Padre::Plugin::HTMLExport;
 BEGIN {
-  $Padre::Plugin::HTMLExport::VERSION = '0.08';
+  $Padre::Plugin::HTMLExport::VERSION = '0.09';
 }
 
 # ABSTRACT: Export highlighted HTML in Padre
@@ -50,7 +50,7 @@ sub menu_plugins_simple {
 	return (
 		Wx::gettext('Export Colorful HTML') => [
 			Wx::gettext('Export HTML...'),  sub { $self->export_html },
-			Wx::gettext('Configure Color'), sub { $self->configure_color },
+			Wx::gettext('Configure Color'), sub { $self->plugin_preferences },
 		]
 	);
 }
@@ -73,8 +73,8 @@ sub export_html {
 			$main,
 			Wx::gettext('Save as HTML...'),
 			$default_dir,
-			"",
-			"*.html",
+			'',
+			'*.html',
 			Wx::wxFD_SAVE,
 		);
 		if ( $dialog->ShowModal == Wx::wxID_CANCEL ) {
@@ -164,7 +164,7 @@ sub export_html {
 	}
 }
 
-sub configure_color {
+sub plugin_preferences {
 	my ($self) = @_;
 	my $main = $self->main;
 
@@ -182,7 +182,7 @@ Padre::Plugin::HTMLExport - Export highlighted HTML in Padre
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 
